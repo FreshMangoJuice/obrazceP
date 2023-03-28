@@ -1,5 +1,12 @@
 # -*- coding: utf-8 -*-
 """
+Created on Tue Mar 28 18:40:26 2023
+
+@author: jindr
+"""
+
+# -*- coding: utf-8 -*-
+"""
 Created on Tue Mar 28 14:48:48 2023
 
 @author: jindr
@@ -18,11 +25,15 @@ def start():
             start()
         else:
             for i in range(radky):
+                #Vy printi mi prvni polovinu diamantu
                 print(" " * ((radky - 1)- i) + "*"*hvezda)
                 hvezda += 2
                 if hvezda == radky:
-                    print(" " * ((radky - 1)- i) + "*"*hvezda)
-                    
+                    break
+            while (hvezda > 0):
+                print(" " * ((radky - 2)- i) + "*"*hvezda)
+                i -= 1
+                hvezda -= 2
     if obrazec != 1 and obrazec !=2:  
         print("Zadal jste spatnou hodnotu")
         start()

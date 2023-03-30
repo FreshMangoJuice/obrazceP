@@ -1,16 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Mar 28 18:40:26 2023
-
-@author: jindr
-"""
-
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Mar 28 14:48:48 2023
-
-@author: jindr
-"""
 def start():
     radky = int(input("Kolik chcete radku?(Pro diamant musi byt liche): "))
     obrazec = int(input("1.Kosoctverec \n2.Diamant\n"))
@@ -25,11 +12,12 @@ def start():
             start()
         else:
             for i in range(radky):
-                #Vy printi mi prvni polovinu diamantu
+                #Vy printi mi prvni polovinu diamantu do prostredka, pak zastav
                 print(" " * ((radky - 1)- i) + "*"*hvezda)
                 hvezda += 2
                 if hvezda == radky:
                     break
+                #Vyprinti druhou pulku
             while (hvezda > 0):
                 print(" " * ((radky - 2)- i) + "*"*hvezda)
                 i -= 1
@@ -38,4 +26,4 @@ def start():
         print("Zadal jste spatnou hodnotu")
         start()
 
-start()        
+start()
